@@ -14,7 +14,7 @@
     --bg-dark: #1e1c1f;
 
     /* Border */
-    --border-primary: solid 2px black;
+    --border-primary: solid 3px black;
 }
 
 * {
@@ -25,6 +25,7 @@
 html {
     font-size: 62.5%;
     font-family: var(--ff-body);
+    scroll-behavior: smooth;
 }
 body {
     font-size: 1.8rem;
@@ -48,12 +49,12 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 3rem 4rem;
-    position: fixed;
+    /* position: fixed;
     width: 100%;
     z-index: 1;
     background-color: var(--bg-primary);
-    top: 0;
-    height: 11rem;
+    top: 0; */
+    height: 10vh;
 }
 .logo {
     display: flex;
@@ -87,11 +88,11 @@ a {
 
 /* *********************HERO************** */
 .hero {
-    margin-top: 11rem;
+    /* margin-top: 11rem; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
-    place-items: center;
+    height: 90vh;
+    width: 100%;
     border-bottom: var(--border-primary);
 }
 .hero__title {
@@ -100,12 +101,25 @@ a {
     text-align: center;
     padding: 4rem 0;
     height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
 }
 .hero__title span {
     font-size: 25rem;
 }
 .hero__logo {
     width: 10rem;
+    animation: rotation 5s infinite linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 .hero__desc {
     display: grid;
@@ -116,6 +130,7 @@ a {
     padding: 2rem 5rem;
     background-color: var(--purple);
     height: 100%;
+    width: 100%;
     border-left: var(--border-primary);
 }
 .hero__text {
@@ -124,4 +139,114 @@ a {
 .hero__link i {
     color: black;
     font-size: 5rem;
+    transition: color .5s ease-in-out;
 }
+.hero__link {
+    animation: jumpInfinite 1.5s infinite;
+}
+.hero__link:hover i {
+    color: var(--green);
+}
+@keyframes jumpInfinite {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+} 
+
+
+/* *****************SLIDE************** */
+.slide__img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border: var(--border-primary);
+}
+
+.slides {
+    overflow: hidden;
+    background-color: var(--bg-dark);
+    padding: 2rem;
+    /* transform: translate3d(0, 0, 0); */
+}
+
+.move {
+    display: flex;
+    width: 3500px;
+    gap: 2rem;
+    margin: 0 auto;
+
+    animation: moveSlides 10s linear infinite;
+}    
+
+@keyframes moveSlides {
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(-1750px, 0, 0);
+    }
+}
+
+
+/* *********************RECIPES************************** */
+.recipes {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 10rem;
+    place-items: center;
+    
+}
+
+.recipes__card {
+    width: 80%;
+    max-width: 60rem;
+    height: 50rem;
+    text-align: center;
+    border: var(--border-primary);
+    display: grid;
+    grid-template-rows: 80% 20%;
+    place-items: center;
+    overflow: hidden;
+    
+}
+.recipes__card:hover .recipes__img {
+    transform: scale(1.1);
+}
+.recipes__img {
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+.recipes__title {
+    overflow: hidden;
+    padding: 2rem 0;
+    font-family: var(--ff-title);
+    font-size: 4rem;
+    color: black;
+    background-color: var(--purple);
+    height: 100%;
+    width: 100%;
+    border-top: var(--border-primary);
+}
+.recipes__card:nth-child(2) .recipes__title {
+    background-color: var(--brown);
+}
+.recipes__card:nth-child(3) .recipes__title {
+    background-color: var(--green);
+}
+.recipes__card:nth-child(4) .recipes__title {
+    background-color: var(--orange);
+}
+
+
+
