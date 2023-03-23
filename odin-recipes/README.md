@@ -8,4 +8,4 @@ Taking these assignments, I started making some designs. Since I already have so
 
 I first thought about this web idea of Rolls, like Cinnamon Rolls, New York Rolls (very famous here in Spain) and some other recipes; all of them should be roll desserts. The first design looked like this:
 
-[](assets/first-design.jpeg)
+![image info](./assets/first-design.jpeg)
