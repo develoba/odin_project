@@ -30,6 +30,7 @@ html {
 body {
     font-size: 1.8rem;
     background-color: var(--bg-primary);
+    width: 100vw;
 }
 img {
     display: block;
@@ -60,6 +61,7 @@ a {
     display: flex;
     align-items: center;
     gap: 2rem;
+    color: black;
 }
 .logo__img {
     width: 5rem;
@@ -161,35 +163,40 @@ a {
 
 
 /* *****************SLIDE************** */
-.slide__img {
-    width: 20rem;
-    height: 20rem;
-    object-fit: cover;
-    border: var(--border-primary);
-}
+
 
 .slides {
-    overflow: hidden;
     background-color: var(--bg-dark);
-    padding: 2rem;
-    /* transform: translate3d(0, 0, 0); */
+    padding: 1rem;
+    overflow: hidden;
 }
 
-.move {
-    display: flex;
-    width: 3500px;
-    gap: 2rem;
-    margin: 0 auto;
-
-    animation: moveSlides 10s linear infinite;
+.marquee {
+    width: 100vw;
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
 }    
+.marquee-content {
+    display: flex;
+    animation: marquee 10s linear infinite;
+}
 
-@keyframes moveSlides {
+.slide__img {
+    width: 20vw;
+    height: 20rem;
+    object-fit: cover;
+    border: 1rem solid var(--bg-dark);
+    /* margin: 0 1rem; */
+    flex-shrink: 0;
+}
+
+@keyframes marquee {
     0% {
-        transform: translate3d(0,0,0);
+        transform: translateX(0);
     }
     100% {
-        transform: translate3d(-1750px, 0, 0);
+        transform: translateX(-160vw);
     }
 }
 
@@ -248,5 +255,201 @@ a {
     background-color: var(--orange);
 }
 
+@media screen and (max-width: 1024px) {
+    .hero {
+        height: auto;
+    }
+    .hero__title {
+        font-size: 8rem;
+    }
+    .hero__title span {
+        font-size: 15rem;
+    }
+    .hero__logo {
+        width: 7rem;
+    }
+    .hero__desc {
+        padding: 5rem 2rem;
+    }
+    .hero__text {
+        font-size: 3rem;
+    }
+    .recipes__card {
+        height: 30rem;
+    }
+    .recipes__title {
+        font-size: 3rem;
+        padding: 1rem 0;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .hero__title {
+        font-size: 5rem;
+    }
+    .hero__title span {
+        font-size: 10rem;
+    }
+    .hero__text {
+        font-size: 2.5rem;
+    }
+    .marquee {
+        height: 15rem;
+    }
+    .slide__img {
+        height: 15rem;
+    }
+    .recipes__card {
+        height: 20rem;
+    }
+    .recipes__title {
+        font-size: 2rem;
+        padding: .5rem 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 2rem;
+        height: auto;
+    }
+    .logo {
+        gap: 1rem;
+    }
+    .logo__img {
+        width: 4rem;
+    }
+    .logo__name {
+        font-size: 3rem;
+    }
+    .header__nav ul {
+        gap: 2rem;
+    }
+    .header__link a {
+        font-size: 2rem;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .hero__title {
+        padding: 2rem 0;
+        font-size: 7rem;
+    }
+    .hero__title span {
+        letter-spacing: 1rem;
+        font-size: 11rem;
+    }
+    .hero__desc {
+        padding: 4rem 0 2rem;
+        gap: 1rem;
+        position: relative;
+        border: none;
+    }
+    .hero__logo {
+        position: absolute;
+        top: -3.5rem;
+    }
+    @keyframes jumpInfinite {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 
+    .recipes {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    .recipes__card {
+        height: 30rem;
+    }
+    .recipes__img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .recipes__title {
+        font-size: 3rem;
+        padding: 1rem 0;
+    }
+}
+@media screen and (max-width: 425px) {
+    .logo__name {
+        font-size: 2.5rem;
+    }
+    .logo__img {
+        width: 3rem;
+    }
+    .header__link a {
+        font-size: 1.5rem;
+    }
+    .hero__title {
+        font-size: 5.5rem;
+    }
+    .hero__title span {
+        font-size: 8rem;
+    }
+    .hero__logo {
+        width: 5rem;
+        top: -2.5rem;
+    }
+    .hero__text {
+        font-size: 2rem;
+    }
+    .hero__link i {
+        font-size: 4rem;
+    }
+    @keyframes jumpInfinite {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .marquee {
+        height: 10rem;
+    }
+    .slide__img {
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo__name {
+        font-size: 2rem;
+    }
+    .logo__img {
+        width: 2.5rem;
+    }
+    .header__nav ul {
+        gap: 1rem;
+    }
+    .header__link a {
+        font-size: 1.3rem;
+    }
+    .hero__desc {
+        padding: 4rem .5rem 2rem;
+    }
+    .slides {
+        padding: .5rem;
+    }
+    .marquee {
+        height: 8rem;
+    }
+    .slide__img {
+        height: 8rem;
+        border: .5rem solid var(--bg-dark);
+    }
+    .recipes__title {
+        font-size: 2rem;
+        padding: 1.5rem 0;
+    }
+}
