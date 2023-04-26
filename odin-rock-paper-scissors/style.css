@@ -1,0 +1,157 @@
+@font-face {
+    font-family: Impact;
+    src: url('./assets/impact/impact.ttf');
+}
+:root {
+    /* COLORS */
+    --bg: #f1faee;
+    --red: #e63946;
+    --red-light: #ec9a9a;
+    --light-blue: #a8dadc;
+    --dark-blue: #457b9d;
+    --bg-opacity: rgba(0,0,0,.5);
+    --bg-opacity-more: rgba(0,0,0,.7);
+}
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+    font-family: Impact;
+}
+body {
+    font-size: 1.8rem;
+    background: var(--bg);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 8rem 10rem 5rem;
+}
+.logo {
+    width: 20rem;
+    position: absolute;
+    left: calc(50% - 10rem);
+    top: 1rem;
+    transform: rotate(9deg);
+    z-index: -1;
+}
+.title {
+    text-transform: uppercase;
+    font-size: 6.2rem;
+    letter-spacing: .5rem;
+}
+.title span {
+    color: var(--red);
+    font-size: 10rem;
+    letter-spacing: .85rem;
+    display: block;
+    margin-top: -2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.round_result {
+    font-size: 4rem;
+    letter-spacing: .5rem;
+}
+
+.game_container {
+    display: flex;
+    padding: 0 3rem;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.box {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.choice_box {
+    width: 30rem;
+    height: 30rem;
+    background-color: var(--light-blue);
+    border: 5px solid var(--dark-blue);
+}
+button {
+    display: block;
+    border: none;
+}
+.selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.btn {
+    background-color: var(--dark-blue);
+    padding: .5rem;
+    width: 5rem;
+    border-radius: 5px;
+    
+}
+.btn img {
+    width: 3.8rem;
+    height: 4rem;
+    margin: 0 auto;
+}
+.btn:last-of-type img {
+    width: 3rem;
+}
+
+.points_text {
+    font-size: 4rem;
+}
+.points_score {
+    color: var(--red-light);
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+}
+.versus {
+    font-size: 4rem;
+}
+.image_rule {
+    width: 20rem;
+}
+
+.restart-btn {
+    width: 20rem;
+    margin: 2rem auto;
+    font-family: inherit;
+    background-color: var(--dark-blue);
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 2.5rem;
+    border-radius: 15px;
+}
