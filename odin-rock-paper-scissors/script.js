@@ -22,11 +22,22 @@ const rules = {'rock': ['scissors', 'lizard'],
             'scissors': ['paper', 'lizard'],
             'lizard': ['spock', 'paper'],
             'spock': ['rock', 'scissors']};
+const phrases = {'rock': ['(as it always has) crushes', 'crushes'],
+            'paper': ['covers', 'disproves'],
+            'scissors': ['cuts', 'decapitates'],
+            'lizard': ['poisons', 'eats'],
+            'spock': ['vaporizes', 'smashes']};
+const phrases_lost = {'rock': ['is crushed by', 'is crushed by'],
+                    'paper': ['is covered by', 'is disproved by'],
+                    'scissors': ['is cut by', 'is decapitated by'],
+                    'lizard': ['is poisoned by', 'is eaten by'],
+                    'spock': ['is vaporized by', 'is smashed by']};
+
 game();
 
 restart_btn.addEventListener('click', () => {
     restart_game();
-    game();
+    //game();
 });
 
 restartGame.addEventListener('click', () => {
@@ -51,8 +62,8 @@ function restart_game() {
 }
 function set_scores() {
     round_result.textContent = result;
-    player_score_text.textContent = `Your score: ${playerScore}`;
-    computer_score_text.textContent = `Computer score: ${computerScore}`;
+    player_score_text.textContent = `points: ${playerScore}`;
+    computer_score_text.textContent = `points: ${computerScore}`;
 }
 
 // Get Computer choice as a random number
@@ -62,14 +73,17 @@ function getComputerChoice() {
 }
 
 // Function of a round that takes two selections and return the winner and update global scores
+let phrase = '';
 function playRound(playerSelection, computerSelection) {
     if (playerSelection != computerSelection) {
         if (computerSelection == rules[playerSelection][0] || computerSelection == rules[playerSelection][1]) {
             playerScore++;
-            return `${playerSelection.toUpperCase()} wins over ${computerSelection.toUpperCase()}!`;
+            phrase = (rules[playerSelection][0] == computerSelection) ? phrases[playerSelection][0] : phrases[playerSelection][1];
+            return `${playerSelection.toUpperCase()} ${phrase} ${computerSelection.toUpperCase()}!`;
         }
         computerScore++;
-        return `${playerSelection.toUpperCase()} loses to ${computerSelection.toUpperCase()} :(`
+        phrase = (rules[computerSelection][0] == playerSelection) ? phrases_lost[computerSelection][0] : phrases_lost[computerSelection][1];
+        return `${playerSelection.toUpperCase()} ${phrase} ${computerSelection.toUpperCase()} :(`;
     }
     return "It's a tie!"
 }

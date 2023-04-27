@@ -7,7 +7,9 @@
     --bg: #f1faee;
     --red: #e63946;
     --red-light: #ec9a9a;
+    --red-light-shadow: hsla(0, 68%, 76%, 0.9);
     --light-blue: #a8dadc;
+    --light-blue-shadow: hsla(182, 43%, 76%, 0.9);
     --dark-blue: #457b9d;
     --bg-opacity: rgba(0,0,0,.5);
     --bg-opacity-more: rgba(0,0,0,.7);
@@ -101,6 +103,8 @@ main {
     border: 5px solid var(--dark-blue);
     display: grid;
     place-items: center;
+    box-shadow: 0 0 10px 1px var(--light-blue-shadow);
+    border-radius: 5px;
 }
 .choice_box img {
     width: 15rem;
@@ -121,7 +125,13 @@ button {
     padding: .5rem;
     width: 5rem;
     border-radius: 5px;
-    
+    box-shadow: 2px 2px 8px 1px var(--light-blue-shadow);
+    transition: all .2s ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.1);
+    background-color: var(--red-light);
+    box-shadow: 2px 2px 8px 1px var(--red-light-shadow);
 }
 .btn img {
     width: 3.8rem;
@@ -174,6 +184,13 @@ button {
     color: white;
     font-size: 2.5rem;
     border-radius: 15px;
+    box-shadow: 2px 2px 8px 1px var(--light-blue-shadow);
+    transition: all .2s ease-in-out;
+}
+.restart-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--red-light);
+    box-shadow: 2px 2px 8px 1px var(--red-light-shadow);
 }
 
 /* GAME OVER PAGE */
@@ -216,6 +233,10 @@ button {
 
 .rule_link {
     background: none;
+    transition: all .2s ease-in-out;
+}
+.rule_link:hover {
+    transform: scale(1.1);
 }
 
 /* RULES PAGE */
