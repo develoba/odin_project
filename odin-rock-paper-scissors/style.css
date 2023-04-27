@@ -35,6 +35,9 @@ img {
     max-width: 100%;
     display: block;
 }
+h1, h2, h3 {
+    font-weight: normal;
+}
 
 header {
     position: relative;
@@ -53,12 +56,12 @@ header {
 .title {
     text-transform: uppercase;
     font-size: 6.2rem;
-    letter-spacing: .5rem;
+    /* letter-spacing: .5rem; */
 }
 .title span {
     color: var(--red);
     font-size: 10rem;
-    letter-spacing: .85rem;
+    letter-spacing: .1rem;
     display: block;
     margin-top: -2rem;
 }
@@ -72,7 +75,7 @@ main {
 
 .round_result {
     font-size: 4rem;
-    letter-spacing: .5rem;
+    letter-spacing: .1rem;
 }
 
 .game_container {
@@ -96,10 +99,16 @@ main {
     height: 30rem;
     background-color: var(--light-blue);
     border: 5px solid var(--dark-blue);
+    display: grid;
+    place-items: center;
+}
+.choice_box img {
+    width: 15rem;
 }
 button {
     display: block;
     border: none;
+    cursor: pointer;
 }
 .selection {
     display: flex;
@@ -138,6 +147,17 @@ button {
     align-items: center;
     gap: 10rem;
 }
+.rule-container {
+    text-align: center;
+}
+.img-source {
+    color: var(--red-light);
+    font-size: 1.2rem;
+    transition: color .2s ease-in-out;
+}
+.img-source:hover {
+    color: var(--red);
+}
 .versus {
     font-size: 4rem;
 }
@@ -154,4 +174,100 @@ button {
     color: white;
     font-size: 2.5rem;
     border-radius: 15px;
+}
+
+/* GAME OVER PAGE */
+.game-over {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-opacity-more);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+.active {
+    display: flex;
+}
+
+.game-over_title {
+    color: white;
+    font-size: 12rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    
+}
+.game-over_title span {
+    font-size: 8rem;
+    display: block;
+    margin-top: 1rem;
+}
+.restart-btn-xl {
+    width: 30rem;
+    height: 10rem;
+
+    font-size: 4rem;
+}
+
+.rule_link {
+    background: none;
+}
+
+/* RULES PAGE */
+.rules-window {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-opacity-more);
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.active-window {
+    display: flex;
+}
+
+.rules-window_img {
+    width: 20rem;
+}
+.rules-window_source {
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: .1rem;
+    margin-top: -2rem;
+}
+.rules-window_source a {
+    color: var(--red-light);
+    transition: color .2s ease-in-out;
+}
+.rules-window_source a:hover {
+    color: var(--red);
+}
+.rules-window_container {
+    background-color: var(--bg);
+    padding: 4rem 8rem;
+    border-radius: 20px;
+}
+.rules-window_container p {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+li {
+    line-height: 2;
+    font-size: 2.5rem;
+}
+.continue-btn {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    width: 30rem;
+    padding: 3rem 0;
 }
