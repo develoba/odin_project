@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: gray;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 1000px;
+}
+.square {
+    background-color: white;
+    border: 1px solid gray;
+}
+.change-color {
+    background-color: violet;
+}
