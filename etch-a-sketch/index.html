@@ -8,9 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="btn-container">
+    <div class="choices">
+        <div class="color-container">
+            <h2>Pick a color</h2>
+            <!-- Color picker with button to select -->
+            <div class="color-choice">
+                <input class="colorChoice" type="radio" name="color" value="black">
+                <label for="color">Black</label>
+            </div>
+            <div class="color-choice">
+                <input class="colorChoice" type="radio" name="color" value="random">
+                <label for="color">Random</label>
+            </div>
+            <button class="btn btnColor" id="btnColor">Choose</button>
+        </div>
+    
+
         <button class="btn" id="btnSize">Change size</button>
         <button class="btn" id="btnErase">Erase All</button>
+        
     </div>
     <div class="container"></div>
 

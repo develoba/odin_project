@@ -2,6 +2,9 @@ let GRID_SIZE = 16;
 const container = document.querySelector(".container");
 const btn = document.getElementById("btnSize");
 const btnErase = document.getElementById("btnErase");
+const colorChoices = document.querySelectorAll(".colorChoice");
+const btnColor = document.getElementById("btnColor");
+console.log(colorChoices)
 
 set_grid();
 draw();
@@ -16,7 +19,17 @@ btn.addEventListener('click', () => {
 btnErase.addEventListener('click', () => {
     set_grid();
     draw();
-})
+});
+btnColor.addEventListener('click', () => {
+    let val;
+    colorChoices.forEach(choice => {
+        if (choice.checked) {
+            val = choice.value;
+        }
+    });
+    console.log(val);
+    setColor(val);
+});
 
 function set_grid() {
     container.innerHTML='';
