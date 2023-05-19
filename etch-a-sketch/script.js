@@ -1,9 +1,10 @@
 let GRID_SIZE = 16;
 const container = document.querySelector(".container");
 const btn = document.getElementById("btnSize");
-
+const btnErase = document.getElementById("btnErase");
 
 set_grid();
+draw();
 
 btn.addEventListener('click', () => {
     let newSize = prompt("Enter new size: ");
@@ -12,7 +13,10 @@ btn.addEventListener('click', () => {
     set_grid();
     draw();
 });
-console.log(GRID_SIZE)
+btnErase.addEventListener('click', () => {
+    set_grid();
+    draw();
+})
 
 function set_grid() {
     container.innerHTML='';
