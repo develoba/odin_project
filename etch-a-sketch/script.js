@@ -4,7 +4,8 @@ const btn = document.getElementById("btnSize");
 const btnErase = document.getElementById("btnErase");
 const colorChoices = document.querySelectorAll(".colorChoice");
 const btnColor = document.getElementById("btnColor");
-console.log(colorChoices)
+
+let color = 'rgb(0,0,0)';
 
 set_grid();
 draw();
@@ -21,14 +22,13 @@ btnErase.addEventListener('click', () => {
     draw();
 });
 btnColor.addEventListener('click', () => {
-    let val;
+
     colorChoices.forEach(choice => {
         if (choice.checked) {
-            val = choice.value;
+            color = choice.value;
         }
     });
-    console.log(val);
-    setColor(val);
+    
 });
 
 function set_grid() {
@@ -46,12 +46,23 @@ function set_grid() {
     console.log(GRID_SIZE)
 }
 
+function setRandomColor() {
+    let red, green, blue;
+    red = Math.floor(Math.random() * 256);
+    green = Math.floor(Math.random() * 256);
+    blue = Math.floor(Math.random() * 256);
+    return `rgb(${red}, ${green}, ${blue})`;
+}
+
 function draw() {
     const squares = document.querySelectorAll(".square");
     let clickCounter = 0;
     squares.forEach(square => square.addEventListener('mouseover', () => {
         clickCounter++;
-        square.style.backgroundColor = "violet";
+        if (color == 'random') {
+            color = setRandomColor();
+        }
+        square.style.backgroundColor = color;
         // squares.forEach(hoveredSquare => hoveredSquare.addEventListener('mouseover', () => {
         //     if (clickCounter % 2 == 0) {
         //         hoveredSquare.style.backgroundColor = 'white';
@@ -59,7 +70,6 @@ function draw() {
         //         hoveredSquare.style.backgroundColor = 'black';
         //     }
         // }));
-        console.log(clickCounter);
     
     }))
 }
