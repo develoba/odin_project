@@ -8,27 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="choices">
+    <div class="container">
         <div class="color-container">
             <h2>Pick a color</h2>
             <!-- Color picker with button to select -->
-            <div class="color-choice">
-                <input class="colorChoice" type="radio" name="color" value="black">
-                <label for="color">Black</label>
-            </div>
-            <div class="color-choice">
-                <input class="colorChoice" type="radio" name="color" value="random">
-                <label for="color">Random</label>
-            </div>
-            <button class="btn btnColor" id="btnColor">Choose</button>
+            <button class="btn" id="btnBlack">Black</button>
+            <button class="btn" id="btnGray">Grayscale</button>
+            <button class="btn" id="btnRainbow">Rainbow</button>
+            <button class="btn" id="btnRandom">Random Color</button>
+            <button class="btn" id="btnErase">Eraser</button>
+            <button class="btn" id="btnEraseAll">Erase All</button>
         </div>
     
-
-        <button class="btn" id="btnSize">Change size</button>
-        <button class="btn" id="btnErase">Erase All</button>
-        
+        <div class="grid-container">
+            <button class="btn" id="btnSize">Change size</button>   
+    
+            <div class="grid"></div>
+        </div>
     </div>
-    <div class="container"></div>
+
 
     <script src="script.js"></script>
 </body>
