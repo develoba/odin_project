@@ -9,9 +9,41 @@ let gridSize = DEFAULT_SIZE;
 
 const grid = document.querySelector(".grid");
 const btnSize = document.getElementById("btnSize");
+
+const btnBlack = document.getElementById('btnBlack');
+const btnGray = document.getElementById('btnGray');
+const btnRainbow = document.getElementById('btnRainbow');
+const btnRandom = document.getElementById('btnRandom');
 const btnErase = document.getElementById("btnErase");
-const colorChoices = document.querySelectorAll(".colorChoice");
-const btnColor = document.getElementById("btnColor");
+const btnEraseAll = document.getElementById("btnEraseAll");
+
+function setMode(newMode) {
+    if (newMode == 'random') {
+        setColor('random');
+    }
+    gridMode = newMode;
+    
+}
+
+function setColor(newColor) {
+    if (newColor == 'random') {
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+        gridColor = `rgb(${red}, ${green}, ${blue})`;
+        console.log(gridColor);
+    }
+}
+
+btnBlack.onclick = () => setMode('black');
+btnGray.onclick = () => setMode('gray');
+btnRainbow.onclick = () => setMode('rainbow');
+btnRandom.onclick = () => setMode('random');
+btnErase.onclick = () => setMode('eraser');
+btnEraseAll.onclick = () => {
+    clearGrid();
+    setGrid();
+}
 
 let mouseDown = false;
 document.body.onmousedown = () => mouseDown = true;
@@ -39,9 +71,13 @@ setGrid();
 //     });
     
 // });
+
+
+
 function clearGrid() {
     grid.innerHTML = '';
 }
+
 function setGrid() {
     grid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
@@ -58,8 +94,25 @@ function setGrid() {
 
 function changeColor(e) {
     if (e.type == 'mouseover' && !mouseDown) return
-    if (colorMode == 'black') {
-        e.target.style.backgroundColor = 'blue';
+    if (gridMode == 'rainbow') {
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+        e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        e.target.style.opacity = 1;
+    } else if (gridMode == 'black') {
+        e.target.style.backgroundColor = DEFAULT_COLOR;
+        e.target.style.opacity = 1;
+    } else if (gridMode == 'random') {
+        e.target.style.backgroundColor = gridColor;
+        e.target.style.opacity = 1;
+    } else if (gridMode == 'gray') {
+        let opacity = e.target.style.opacity;
+        e.target.style.backgroundColor = 'black';
+        e.target.style.opacity = Number(opacity) + 0.05;
+    } else if (gridMode == 'eraser') {
+        e.target.style.backgroundColor = 'white';
+        e.target.style.opacity = 1;
     }
 }
 
