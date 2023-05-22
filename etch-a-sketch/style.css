@@ -29,6 +29,31 @@ body {
     color: white;
     cursor: pointer;
 }
+#btnSize {
+    appearance: none;
+    width: 15rem;
+    margin: 0 auto;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: .7;
+    border: 1px solid #222;
+}
+
+#btnSize:hover {
+    opacity: 1;
+}
+
+#btnSize::-webkit-slider-thumb {
+    appearance: none;
+    background: #222;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .grid {
     display: grid;
     width: 900px;
