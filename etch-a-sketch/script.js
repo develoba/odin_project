@@ -1,4 +1,4 @@
-const DEFAULT_SIZE = 16;
+const DEFAULT_SIZE = 64;
 const DEFAULT_COLOR = '#000';
 const DEFAULT_MODE = 'black';
 
@@ -16,10 +16,35 @@ const btnRainbow = document.getElementById('btnRainbow');
 const btnRandom = document.getElementById('btnRandom');
 const btnErase = document.getElementById("btnErase");
 const btnEraseAll = document.getElementById("btnEraseAll");
+const btnColorPicker = document.getElementById('btnColorPicker');
+
+btnBlack.onclick = () => setMode('black');
+btnGray.onclick = () => setMode('gray');
+btnRainbow.onclick = () => setMode('rainbow');
+btnRandom.onclick = () => setMode('random');
+btnErase.onclick = () => setMode('eraser');
+btnEraseAll.onclick = () => {
+    clearGrid();
+    setGrid();
+}
+btnColorPicker.addEventListener('input', function(e) {
+    setColor(this.value);
+    console.log(this.value);
+});
+
+let mouseDown = false;
+document.body.onmousedown = () => mouseDown = true;
+document.body.onmouseup = () => mouseDown = false;
+
+function main() {
+    setGrid();
+}
 
 function setMode(newMode) {
     if (newMode == 'random') {
         setColor('random');
+    } else if (newMode == 'black') {
+        setColor('black')
     }
     gridMode = newMode;
     
@@ -32,47 +57,10 @@ function setColor(newColor) {
         let blue = Math.floor(Math.random() * 256);
         gridColor = `rgb(${red}, ${green}, ${blue})`;
         console.log(gridColor);
+    } else {
+        gridColor = newColor;
     }
 }
-
-btnBlack.onclick = () => setMode('black');
-btnGray.onclick = () => setMode('gray');
-btnRainbow.onclick = () => setMode('rainbow');
-btnRandom.onclick = () => setMode('random');
-btnErase.onclick = () => setMode('eraser');
-btnEraseAll.onclick = () => {
-    clearGrid();
-    setGrid();
-}
-
-let mouseDown = false;
-document.body.onmousedown = () => mouseDown = true;
-document.body.onmouseup = () => mouseDown = false;
-
-setGrid();
-
-// btn.addEventListener('click', () => {
-//     let newSize = prompt("Enter new size: ");
-//     GRID_SIZE = newSize;
-
-//     setGrid();
-//     draw();
-// });
-// btnErase.addEventListener('click', () => {
-//     setGrid();
-//     draw();
-// });
-// btnColor.addEventListener('click', () => {
-
-//     colorChoices.forEach(choice => {
-//         if (choice.checked) {
-//             color = choice.value;
-//         }
-//     });
-    
-// });
-
-
 
 function clearGrid() {
     grid.innerHTML = '';
@@ -100,12 +88,6 @@ function changeColor(e) {
         let blue = Math.floor(Math.random() * 256);
         e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
         e.target.style.opacity = 1;
-    } else if (gridMode == 'black') {
-        e.target.style.backgroundColor = DEFAULT_COLOR;
-        e.target.style.opacity = 1;
-    } else if (gridMode == 'random') {
-        e.target.style.backgroundColor = gridColor;
-        e.target.style.opacity = 1;
     } else if (gridMode == 'gray') {
         let opacity = e.target.style.opacity;
         e.target.style.backgroundColor = 'black';
@@ -113,7 +95,12 @@ function changeColor(e) {
     } else if (gridMode == 'eraser') {
         e.target.style.backgroundColor = 'white';
         e.target.style.opacity = 1;
+    } else {
+        e.target.style.backgroundColor = gridColor;
+        e.target.style.opacity = 1;
     }
+    console.log(gridColor)
+    console.log(gridMode);
 }
 
 function setRandomColor() {
@@ -124,22 +111,7 @@ function setRandomColor() {
     return `rgb(${red}, ${green}, ${blue})`;
 }
 
-function draw() {
-    // const squares = document.querySelectorAll(".square");
-    // let clickCounter = 0;
-    // squares.forEach(square => square.addEventListener('click', () => {
-    //     clickCounter++;
-    //     if (color == 'random') {
-    //         color = setRandomColor();
-    //     }
-    //     square.style.backgroundColor = color;
-    //     squares.forEach(hoveredSquare => hoveredSquare.addEventListener('mouseover', () => {
-    //         if (clickCounter % 2 == 0) {
-    //             hoveredSquare.style.backgroundColor = 'white';
-    //         } else {
-    //             hoveredSquare.style.backgroundColor = color;
-    //         }
-    //     }));
-    
-    // }))
+
+window.onload = () => {
+    main();
 }
