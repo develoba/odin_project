@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+@font-face {
+    font-family: zuka;
+    src: url('./ZukaDoodle-Kz7y.ttf');
+}
+
+:root {
+    --bg-btn-color: #57527e;
+    --bg-btn-color-hover: #57527e8a;
+    --shadow: hsla(247, 21%, 41%, 0.1);
+    --bg-body: #212930;
+    --title-new: #c3c8cd;
+    --title-new-hover: #c3c8cd77;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,34 +22,95 @@ body {
     min-height: 100vh;
     display: grid;
     place-content: center;
-    background-color: gray;
+    background-color: var(--bg-body);
+    text-align: center;
     /* opacity: calc(1 - .2); */
+    font-family: 'Delicious Handrawn', cursive;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
 }
+
 .container {
     display: grid;
     grid-template-columns: .5fr 2fr;
     gap: 2rem;
+    
 }
+
 .upper-container {
     grid-area: 1 / 2 / 2 / 3;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
 }
-.size-container {
 
+.title {
+    grid-area: 1 / 1 / 2 / 3;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    color: var(--title-new);
+    font-family: zuka;
+    font-size: 4rem;
+    letter-spacing: .3rem;
+}
+
+.size-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    place-self: start;
+}
+
+.download-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
 }
 
 .btn {
+    font: inherit;
+    text-transform: inherit;
+    letter-spacing: inherit;
     width: 10rem;
     margin: 0 auto;
     padding: 2rem .5rem;
     border: none;
     border-radius: 10px;
-    background-color: #222;
+    background-color: var(--bg-btn-color);
     color: white;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 3px 10px black;
+
 }
+.btn:hover {
+    background-color: var(--bg-btn-color-hover);
+}
+
+.btnDownload, .btnNew {
+    padding: .5rem 2rem;
+    width: 100%;
+    font: inherit;
+    text-align: center;
+    background-color: var(--bg-btn-color);
+}
+
+
+.btnNew {
+    grid-area: 2 / 1 / 3 / 3;
+    background-color: var(--title-new);
+    color: var(--bg-body);
+    font-weight: bold;
+}
+
+.btnNew:hover {
+    background-color: var(--title-new-hover);
+}
+
+.btnColor:hover {
+    scale: 1.1;
+}
+
 #btnSize {
     appearance: none;
     width: 15rem;
@@ -45,6 +121,8 @@ body {
     cursor: pointer;
     opacity: .7;
     border: 1px solid #222;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 3px 10px black;
 }
 
 #btnSize:hover {
@@ -53,17 +131,28 @@ body {
 
 #btnSize::-webkit-slider-thumb {
     appearance: none;
-    background: #222;
+    background: var(--bg-btn-color);
     width: 25px;
     height: 25px;
     border-radius: 50%;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#btnSize:hover::-webkit-slider-thumb {
+    width: 35px;
+    height: 35px;
+    background-color: var(--bg-btn-color);
+}
+.sizeText {
+    color: var(--title-new);
 }
 
 .grid {
     display: grid;
     width: 900px;
     height: 900px;
+    box-shadow: 2px 2px 20px 2px black;
 }
 .square {
     background-color: white;
@@ -71,7 +160,7 @@ body {
     /* border: 1px solid gray; */
 }
 .change-color {
-    background-color: violet;
+    background-color: #4000A6;
 }
 
 .color-container {
@@ -89,9 +178,11 @@ input[type="color"] {
     cursor: pointer;
     width: 10rem;
     height: 90px;
+    transition: all .2s ease-in-out;
 }
 input[type="color"]::-webkit-color-swatch {
     border-radius: 10px;
-    /* border: 7px solid black; */
+    border: none;
+    box-shadow: 0 3px 10px black;
 }
 

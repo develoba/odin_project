@@ -10,14 +10,15 @@
 
 </head>
 <body>
-    <h1 class="title">Etch-a-sketch</h1>
-
+    
     <div class="container">
         <div class="empty-grid"></div>
-
+        
         <div class="upper-container">
+            <h1 class="title">Etch-a-sketch</h1>
+
             <div class="size-container">
-                <label for="btnSize">Change size: </label>
+                <label for="btnSize" class="sizeText">Change size </label>
                 <input type="range" min="2" max="64" id="btnSize" value="16">
             </div>
             
@@ -30,13 +31,13 @@
 
         <div class="color-container">
             <!-- Color picker with button to select -->
-            <input type="color" value="#70588D" id="btnColorPicker">
-            <button class="btn" id="btnBlack">Black</button>
-            <button class="btn" id="btnGray">Grayscale</button>
-            <button class="btn" id="btnRainbow">Rainbow</button>
-            <button class="btn" id="btnRandom">Random Color</button>
-            <button class="btn" id="btnErase">Eraser</button>
-            <button class="btn" id="btnEraseAll">Erase All</button>
+            <input class="btnColor" type="color" value="#57527e" id="btnColorPicker">
+            <button class="btn btnColor" id="btnBlack">Black</button>
+            <button class="btn btnColor" id="btnGray">Grayscale</button>
+            <button class="btn btnColor" id="btnRainbow">Rainbow</button>
+            <button class="btn btnColor" id="btnRandom">Random Color</button>
+            <button class="btn btnColor" id="btnErase">Eraser</button>
+            <button class="btn btnColor" id="btnEraseAll">Erase All</button>
         </div>
     
         <div class="grid-container">
