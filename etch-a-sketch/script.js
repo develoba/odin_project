@@ -1,4 +1,4 @@
-const DEFAULT_SIZE = 64;
+const DEFAULT_SIZE = 16;
 const DEFAULT_COLOR = '#000';
 const DEFAULT_MODE = 'black';
 
@@ -26,11 +26,11 @@ btnErase.onclick = () => setMode('eraser');
 btnEraseAll.onclick = () => {
     clearGrid();
     setGrid();
-}
+};
 btnColorPicker.addEventListener('input', function(e) {
     setColor(this.value);
-    console.log(this.value);
 });
+btnSize.addEventListener('input', () => setGridSize(btnSize.value));
 
 let mouseDown = false;
 document.body.onmousedown = () => mouseDown = true;
@@ -60,6 +60,12 @@ function setColor(newColor) {
     } else {
         gridColor = newColor;
     }
+}
+
+function setGridSize(size) {
+    clearGrid();
+    gridSize = size;
+    setGrid()
 }
 
 function clearGrid() {
