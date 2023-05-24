@@ -5,6 +5,7 @@ const DEFAULT_MODE = 'black';
 let gridMode = DEFAULT_MODE;
 let gridColor = DEFAULT_COLOR;
 let gridSize = DEFAULT_SIZE;
+let getCanvas;
 
 
 const grid = document.querySelector(".grid");
@@ -17,6 +18,9 @@ const btnRandom = document.getElementById('btnRandom');
 const btnErase = document.getElementById("btnErase");
 const btnEraseAll = document.getElementById("btnEraseAll");
 const btnColorPicker = document.getElementById('btnColorPicker');
+const btnFix = document.getElementById('btnFix');
+const btnDownload = document.getElementById('btnDownload');
+const btnNew = document.getElementById('btnNew');
 
 btnBlack.onclick = () => setMode('black');
 btnGray.onclick = () => setMode('gray');
@@ -29,8 +33,17 @@ btnEraseAll.onclick = () => {
 };
 btnColorPicker.addEventListener('input', function(e) {
     setColor(this.value);
+    setMode('chosen');
 });
 btnSize.addEventListener('input', () => setGridSize(btnSize.value));
+btnFix.addEventListener('click', () => toCanvas());
+btnDownload.addEventListener('click', () => downloadCanvas()); 
+btnNew.addEventListener('click', () => {
+    setGridSize(gridSize);
+    getCanvas = undefined;
+    btnDownload.removeAttribute("dowload");
+    btnDownload.removeAttribute("href");
+});
 
 let mouseDown = false;
 document.body.onmousedown = () => mouseDown = true;
@@ -56,7 +69,6 @@ function setColor(newColor) {
         let green = Math.floor(Math.random() * 256);
         let blue = Math.floor(Math.random() * 256);
         gridColor = `rgb(${red}, ${green}, ${blue})`;
-        console.log(gridColor);
     } else {
         gridColor = newColor;
     }
@@ -105,8 +117,6 @@ function changeColor(e) {
         e.target.style.backgroundColor = gridColor;
         e.target.style.opacity = 1;
     }
-    console.log(gridColor)
-    console.log(gridMode);
 }
 
 function setRandomColor() {
@@ -115,6 +125,23 @@ function setRandomColor() {
     green = Math.floor(Math.random() * 256);
     blue = Math.floor(Math.random() * 256);
     return `rgb(${red}, ${green}, ${blue})`;
+}
+
+function toCanvas() {
+    html2canvas(document.getElementById('grid')).then(function(canvas) {
+        getCanvas = canvas;
+    });
+}
+
+function downloadCanvas() {
+    if (getCanvas == undefined) {
+        alert("Make sure to fix your drawing before downloading!")
+    } else {
+        let imageData = getCanvas.toDataURL();
+        let newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
+        btnDownload.setAttribute("download", "mydrawing.png");
+        btnDownload.setAttribute("href", newData);
+    }
 }
 
 

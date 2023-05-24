@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/html2canvas.js"></script>
+
 </head>
 <body>
+    <h1 class="title">Etch-a-sketch</h1>
+
     <div class="container">
+        <div class="empty-grid"></div>
+
         <div class="upper-container">
-            <label for="btnSize">Change size: </label>
-            <input type="range" min="2" max="64" id="btnSize" value="16">  
+            <div class="size-container">
+                <label for="btnSize">Change size: </label>
+                <input type="range" min="2" max="64" id="btnSize" value="16">
+            </div>
+            
+            <div class="download-container">
+                <button class="btn btnDownload" id="btnFix">Set drawing</button>
+                <a class="btn btnDownload" id="btnDownload">Download</a>
+                <button class="btn btnNew" id="btnNew">Start new Draw</button>
+            </div>
         </div>
 
         <div class="color-container">
@@ -26,8 +40,7 @@
         </div>
     
         <div class="grid-container">
-    
-            <div class="grid"></div>
+            <div class="grid" id="grid"></div>
         </div>
     </div>
 
