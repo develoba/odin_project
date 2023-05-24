@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="/html2canvas.js"></script>
 
 </head>
@@ -19,12 +20,12 @@
         <div class="color-container">
             <!-- Color picker with button to select -->
             <input class="btnColor" type="color" value="#57527e" id="btnColorPicker">
-            <button class="btn btnColor" id="btnBlack">Black</button>
-            <button class="btn btnColor" id="btnGray">Grayscale</button>
-            <button class="btn btnColor" id="btnRainbow">Rainbow</button>
-            <button class="btn btnColor" id="btnRandom">Random Color</button>
-            <button class="btn btnColor" id="btnErase">Eraser</button>
-            <button class="btn btnColor" id="btnEraseAll">Erase All</button>
+            <button class="btn btnColor" id="btnBlack"><span>Black</span></button>
+            <button class="btn btnColor" id="btnGray"><span>Grayscale</span></button>
+            <button class="btn btnColor" id="btnRainbow"><span>Rainbow</span></button>
+            <button class="btn btnColor" id="btnRandom"><span>Random</span></button>
+            <button class="btn btnColor" id="btnErase"><span>Eraser</span></button>
+            <button class="btn btnColor" id="btnEraseAll"><span>Erase All</span></button>
         </div>
     
         <div class="grid-container">
@@ -38,15 +39,12 @@
             </div>
             
             <div class="download-container">
-                <button class="btn btnDownload" id="btnFix">Lock</button>
-                <a class="btn btnDownload" id="btnDownload">Download</a>
-                <button class="btn btnNew" id="btnNew">New Draw</button>
+                <button class="btn btnDownload" id="btnFix"><span>Lock</span></button>
+                <a class="btn btnDownload" id="btnDownload"><span>Download</span></a>
+                <button class="btn btnNew" id="btnNew"><span>New Draw</span></button>
             </div>
         </div>
     </div>
-
-    
-
 
     <script src="script.js"></script>
 </body>
