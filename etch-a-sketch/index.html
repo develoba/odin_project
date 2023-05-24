@@ -12,22 +12,9 @@
 <body>
     
     <div class="container">
-        <div class="empty-grid"></div>
+        <!-- <div class="empty-grid"></div> -->
         
-        <div class="upper-container">
-            <h1 class="title">Etch-a-sketch</h1>
-
-            <div class="size-container">
-                <label for="btnSize" class="sizeText">Change size </label>
-                <input type="range" min="2" max="64" id="btnSize" value="16">
-            </div>
-            
-            <div class="download-container">
-                <button class="btn btnDownload" id="btnFix">Set drawing</button>
-                <a class="btn btnDownload" id="btnDownload">Download</a>
-                <button class="btn btnNew" id="btnNew">Start new Draw</button>
-            </div>
-        </div>
+        <h1 class="title">Etch-a-sketch</h1>
 
         <div class="color-container">
             <!-- Color picker with button to select -->
@@ -43,7 +30,22 @@
         <div class="grid-container">
             <div class="grid" id="grid"></div>
         </div>
+
+        <div class="options-container">
+            <div class="size-container">
+                <label for="btnSize" class="sizeText">Change size </label>
+                <input type="range" min="2" max="64" id="btnSize" value="16">
+            </div>
+            
+            <div class="download-container">
+                <button class="btn btnDownload" id="btnFix">Lock</button>
+                <a class="btn btnDownload" id="btnDownload">Download</a>
+                <button class="btn btnNew" id="btnNew">New Draw</button>
+            </div>
+        </div>
     </div>
+
+    
 
 
     <script src="script.js"></script>
