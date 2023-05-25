@@ -71,8 +71,7 @@ For the drawing part, the function listens when the mouse is over a pixel and if
 
 ## Responsiveness
 The final result shows three different functional designs for desktop, tablet and mobile.
-![Tablet Preview](./img/tabletPreview.png)
-![Mobile Preview](./img/mobilePreview.png)
+![Tablet Preview](./img/tabletPreview.png) | ![Mobile Preview](./img/mobilePreview.png)
 
 # Launch
 
