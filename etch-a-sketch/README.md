@@ -39,7 +39,8 @@ The desktop-based design have a main grid that contains the drawing part. On eac
 On the other hand, for the mobile design, I thought that it would be a better idea to adapt the drawing to the entire screen. In this case, the buttons are on top and on the right of the screen, above the drawing grid, and the explanatory text of the buttons is replaced by icons.
 
 ### Colors
-
+Three colors were used in this project:
+* [#57527e] (https://placehold.co/15x15/57527e/57527e.png) `#57527e`
 ### Fonts
 
 
