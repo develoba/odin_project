@@ -40,9 +40,9 @@ On the other hand, for the mobile design, I thought that it would be a better id
 
 ### Colors
 Three colors were used in this project:
-* ![#57527e](https://placehold.co/20x20/57527e/57527e.png) `#57527e` -> buttons
-* ![#212930](https://placehold.co/20x20/212930/212930.png) `#212930` -> background
-* ![#c3c8cd](https://placehold.co/20x20/c3c8cd/c3c8cd.png) `#c3c8cd` -> text
+* ![#57527e](https://placehold.co/20x20/57527e/57527e.png) `#57527e` &rarr; buttons
+* ![#212930](https://placehold.co/20x20/212930/212930.png) `#212930` &rarr; background
+* ![#c3c8cd](https://placehold.co/20x20/c3c8cd/c3c8cd.png) `#c3c8cd` &rarr; text
 ### Fonts
 
 
