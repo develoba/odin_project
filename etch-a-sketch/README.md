@@ -73,7 +73,7 @@ For the drawing part, the function listens when the mouse is over a pixel and if
 The final result shows three different functional designs for desktop, tablet and mobile.
 
 <p align="center">
-    <img src="./img/tabletPreview.png" width="50%"> 
+    <img src="./img/tabletPreview.png" width="60%"> 
     <img src="./img/mobilePreview.png" width="30%">
 </p>
 
