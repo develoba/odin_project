@@ -26,6 +26,9 @@ This project follows a basic web development stack:
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+  
+## Libraries used
+Besides the main stack, I used [html2canvas](https://github.com/niklasvh/html2canvas) library in order to capture the grid of the draw and convert it to a canvas element so that it can be downloaded.
 
 # Detailed Implementation
 ## HTML
