@@ -214,28 +214,13 @@ input[type="color"]::-webkit-color-swatch {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .title {
-        position: absolute;
-        top: 0;
-        color: var(--bg-body);
-        grid-area: 1 / 1 / 2 / 2;
-    }
-    .container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+@media screen and (max-width: 1000px) {
+    .color-container {
+        justify-self: end;
     }
     .color-container span{
         display: none;
     }
-    .color-container {
-        position: absolute;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        top: 5rem;
-    }
-    
     #btnBlack {
         background: black;
     }
@@ -253,6 +238,60 @@ input[type="color"]::-webkit-color-swatch {
     }
     #btnEraseAll {
         background: url('./img/trash-can-solid.svg') no-repeat center, var(--bg-btn-color);
+    }
+    .btn {
+        width: 3rem;
+    }
+    input[type="color"] {
+        height: 50px;
+        width: 3rem;
+    }
+
+    .btnDownload span, .btnNew span {
+        display: none;
+    }
+    .btnDownload, .btnNew {
+        height: 2rem;
+        width: 4rem;
+    }
+    #btnFix {
+        background: url('./img/check-solid.svg') no-repeat center, var(--bg-btn-color);
+    }
+    #btnDownload {
+        background: url('./img/download-solid.svg') no-repeat center, var(--bg-btn-color);
+    }
+    #btnNew {
+        background: url('./img/plus-solid.svg') no-repeat center, var(--title-new);
+    }
+    
+    .sizeText {
+        display: none;
+    }
+    #btnSize {
+        top: 20%;
+        left: -100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        position: absolute;
+        top: 0;
+        color: var(--bg-body);
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .color-container {
+        justify-self: center;
+        position: absolute;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        top: 5rem;
     }
     .btn {
         padding: 1rem .2rem;
@@ -277,9 +316,7 @@ input[type="color"]::-webkit-color-swatch {
         position: absolute;
         top: 6rem;
     }
-    .sizeText {
-        display: none;
-    }
+    
     #btnSize {
         top: 7rem;
         left: -90px;
@@ -290,17 +327,32 @@ input[type="color"]::-webkit-color-swatch {
         top: 20rem;
         left: 1rem;
     }
-    .btnDownload span, .btnNew span {
-        display: none;
-    }
-    #btnFix {
-        background: url('./img/check-solid.svg') no-repeat center, var(--bg-btn-color);
-    }
-    #btnDownload {
-        background: url('./img/download-solid.svg') no-repeat center, var(--bg-btn-color);
-    }
-    #btnNew {
-        background: url('./img/plus-solid.svg') no-repeat center, var(--title-new);
-    }
+    
 }
 
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 3rem;
+    }
+    .color-container {
+        top: 4rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .color-container {
+        top: 3rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    .title {
+        font-size: 2rem;
+    }
+    .color-container {
+        top: 2.5rem;
+        gap: .5rem;
+    }
+
+}
