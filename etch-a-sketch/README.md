@@ -44,7 +44,8 @@ Three colors were used in this project:
 * ![#212930](https://placehold.co/20x20/212930/212930.png) `#212930` &rarr; background
 * ![#c3c8cd](https://placehold.co/20x20/c3c8cd/c3c8cd.png) `#c3c8cd` &rarr; text
 ### Fonts
-
+* [Zuka Doodle](https://www.fontspace.com/zuka-doodle-font-f35028) &rarr; free font for title
+* [Delicious Handrawn](https://fonts.google.com/specimen/Delicious+Handrawn?query=delici) &rarr; text
 
 ## HTML
 
