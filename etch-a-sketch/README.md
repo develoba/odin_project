@@ -40,7 +40,7 @@ On the other hand, for the mobile design, I thought that it would be a better id
 
 ### Colors
 Three colors were used in this project:
-* [#57527e](https://placehold.co/15x15/57527e/57527e.png) `#57527e`
+* ![#57527e](https://placehold.co/15x15/57527e/57527e.png) `#57527e`
 ### Fonts
 
 
