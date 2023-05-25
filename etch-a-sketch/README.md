@@ -6,7 +6,7 @@
     <h4><b>4th assignment of <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a></b></h4>
 </div>
 
-### [![Website Screenshot](./img/preview.png)] (./img/preview.png)
+### ![Website Screenshot](./img/preview.png)
 
 # Introduction
 
