@@ -16,6 +16,29 @@ In this project, etch-a-sketch, it is simply an UI where the user can drag the m
 
 Moreover, I thought of an original feature that could be implemented, and I figured that aggregating an option of downloading the drawing as a picture could be interesting!
 
+If you're interested in the implementation of this project or the stack used, keep reading!
+
+# Table of contents
 
 # Tech stack
+This project follows a basic web development stack:
+
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+# Detailed Implementation
+## HTML
+
+## CSS
+
+## JS
+
+## Resposiveness
+
+# Launch
+
+# Contribute
+
+# Credits
 
