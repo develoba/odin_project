@@ -30,6 +30,15 @@ This project follows a basic web development stack:
 ## Libraries used
 Besides the main stack, I used [html2canvas](https://github.com/niklasvh/html2canvas) library in order to capture the grid of the draw and convert it to a canvas element so that it can be downloaded.
 
+# Motivation
+As it was previously mentioned, the main motivation of this project is to keep on completing assignments of [The Odin Project](https://theodinproject.com) and to practice on Javascript skills learnt.
+
+These kind of projects motivates me a lot, because the course gives the first guidelines to make a basic project, but you are also able to add more features and then having a full project designed from scratch and with your own ideas.
+
+Moreover, I firstly took this project as a big challenge because I had no idea how to make the pixels painted according to the mouse events. But after reading other's people code, understanding it and searching for more documentation, I found myself capable of doing it. After completing this part, I thought about adding the downloading feature and I was in the same point again of having no clue about how to implement it. After some searches I found a library that could help in this implementation and I finally got it.
+
+After all, the main motivation at the start of this project was to see basic guidelines with a blank document and thinking about making my own project from scratch. When I finished the project, it motivated me much more seeing me capable of understanding new concepts and applying them to my website.
+
 # Detailed Implementation
 ## Design
 Two general designs were made. I created the first one for larger screens like desktops or tablets; while the second design was adapted to smallest screens as phone devices.
@@ -74,14 +83,18 @@ The final result shows three different functional designs for desktop, tablet an
 
 <p align="center">
     <img src="./img/tabletPreview.png" width="60%"> 
-    <span>   </span>
     <img src="./img/mobilePreview.png" width="30%">
 </p>
 
 
-# Launch
-
 # Contribute
+If you liked my project and ideas or you think I could improve it, feel free to support my work or give me any advice!
+
 
 # Credits
+Develoba
+<p align="center">
+    <a href="https://github.com/develoba"><img src="![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)"></a>
+    <a href="https://twitter.com/develoba"><img src="![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)"></a>
+</p>
 
