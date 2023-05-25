@@ -8,9 +8,14 @@
 
 ### ![Website Screenshot](./img/preview.png)
 
-# Introduction
+This project had the aim of applying basic Javascript knowledge and to learn how to lookup information and how to ask yourself the right questions to search for answers.
 
-This is one of the project of The Odin Project (https://www.theodinproject.com/)
+After all, I think that you don't need to know every little thing of programming languages and logical concepts; however, it is necessary to know what you're doing and what you want to achieve, and when you don't remember which method or library you should use, just look it up.
+
+In this project, etch-a-sketch, it is simply an UI where the user can drag the mouse to draw anything and choose different colors. The interface also allows to erase some parts or all the drawing, and to change the size of the pixels of the sketch, going from a grid of 2x2 pixels up to one of 64x64.
+
+Moreover, I thought of an original feature that could be implemented, and I figured that aggregating an option of downloading the drawing as a picture could be interesting!
+
 
 # Tech stack
 
