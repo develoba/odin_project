@@ -62,10 +62,17 @@ Used pure CSS to style each element by sleecting them by class or ID.
 * Change the content of the buttons according to the size of the screen
 
 ## JS
+Calls for different functions when clicking a button. Functions for setting the main color and grid size when an evet occurs.
 
+When the user clicks on the download button, an alert appears because the lock button must be clicked firstly. This is done because the lock button change the grid to a canvas element with the [html2canvas](https://github.com/niklasvh/html2canvas) library, and then the download button takes this canvas and download it.
+
+For the drawing part, the function listens when the mouse is over a pixel and if the mouse is clicked while it hovers, then the pixel is painted. A boolean variable is needed in this case, where it turns true when the user clicks on the mouse and false when the mouse is no longer clicked.
 
 
 ## Responsiveness
+The final result shows three different functional designs for desktop, tablet and mobile.
+![Tablet Preview](./img/tabletPreview.png)
+![Mobile Preview](./img/mobilePreview.png)
 
 # Launch
 
