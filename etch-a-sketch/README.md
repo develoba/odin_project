@@ -3,8 +3,9 @@
         <img src="./img/paintbrush-solid.svg" alt="Etch-a-sketch icon" height = "25px">
         <a href="https://spectacular-torte-2fa425.netlify.app/">Etch A Sketch</a>
     </h1>
-    <h4><b>4th assignment of <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a></b></h4>
-
+    <h4>
+        <b>4th assignment of <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a></b>
+    </h4>
     <h4>
         <a href="#tech-stack">Stack</a>
         •
@@ -14,7 +15,6 @@
         •
         <a href="#credits">Credits</a>
     </h4>
-
     <h4>
         <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
         <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
