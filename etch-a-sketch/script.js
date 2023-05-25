@@ -135,7 +135,7 @@ function toCanvas() {
 
 function downloadCanvas() {
     if (getCanvas == undefined) {
-        alert("Make sure to fix your drawing before downloading!")
+        alert("Make sure to lock your drawing before downloading!")
     } else {
         let imageData = getCanvas.toDataURL();
         let newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
