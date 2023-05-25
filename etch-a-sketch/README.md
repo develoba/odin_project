@@ -4,6 +4,23 @@
         <a href="https://spectacular-torte-2fa425.netlify.app/">Etch A Sketch</a>
     </h1>
     <h4><b>4th assignment of <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a></b></h4>
+
+    <h4>
+        <a href="#tech-stack">Stack</a>
+        •
+        <a href="#motivation">Motivation</a>
+        •
+        <a href="#detailed-implementation">Implementation</a>
+        •
+        <a href="#credits">Credits</a>
+    </h4>
+
+    <h4>
+        <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+        <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+    </h4>
+
 </div>
 
 ### ![Website Screenshot](./img/preview.png)
@@ -19,6 +36,22 @@ Moreover, I thought of an original feature that could be implemented, and I figu
 If you're interested in the implementation of this project or the stack used, keep reading!
 
 # Table of contents
+- [Table of contents](#table-of-contents)
+- [Tech stack](#tech-stack)
+  - [Libraries used](#libraries-used)
+- [Motivation](#motivation)
+- [Detailed Implementation](#detailed-implementation)
+  - [Design](#design)
+    - [Colors](#colors)
+    - [Fonts](#fonts)
+  - [HTML](#html)
+    - [Highlights:](#highlights)
+  - [CSS](#css)
+    - [Highlights:](#highlights-1)
+  - [JS](#js)
+  - [Responsiveness](#responsiveness)
+- [Contribute](#contribute)
+- [Credits](#credits)
 
 # Tech stack
 This project follows a basic web development stack:
@@ -93,6 +126,7 @@ If you liked my project and ideas or you think I could improve it, feel free to 
 
 # Credits
 Develoba
+
 [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/develoba)
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/develoba)
 
