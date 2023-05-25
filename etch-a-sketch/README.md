@@ -48,11 +48,22 @@ Three colors were used in this project:
 * [Delicious Handrawn](https://fonts.google.com/specimen/Delicious+Handrawn?query=delici) &rarr; text
 
 ## HTML
+Basic HTML structure by creating containers for the part of the buttons of colors, another for the grid of the drawing, and a third for the other buttons that allows for more options on the sketch.
 
+### Highlights:
+* Use of input of type color to have a button to pick any color
+* Use of input of type range to change the size of the grid
 
 ## CSS
+Used pure CSS to style each element by sleecting them by class or ID. 
+
+### Highlights:
+* Use of flexbox and grid for different containers
+* Change the content of the buttons according to the size of the screen
 
 ## JS
+
+
 
 ## Responsiveness
 
