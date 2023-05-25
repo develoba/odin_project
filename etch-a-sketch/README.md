@@ -74,6 +74,7 @@ The final result shows three different functional designs for desktop, tablet an
 
 <p align="center">
     <img src="./img/tabletPreview.png" width="60%"> 
+    <span>   </span>
     <img src="./img/mobilePreview.png" width="30%">
 </p>
 
