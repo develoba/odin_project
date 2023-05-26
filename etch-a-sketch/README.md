@@ -125,7 +125,6 @@ If you liked my project and ideas or you think I could improve it, feel free to 
 
 
 # Credits
-Develoba
 
 [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/develoba)
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/develoba)
