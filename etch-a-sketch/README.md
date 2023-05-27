@@ -121,8 +121,7 @@ The final result shows three different functional designs for desktop, tablet an
 
 
 # Contribute
-If you liked my project and ideas or you think I could improve it, feel free to support my work or give me any advice!
-
+If you liked my project and ideas or you think I could improve it, feel free to support my work or give me any advice by leaving me a message!
 
 # Credits
 
