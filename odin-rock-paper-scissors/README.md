@@ -1,7 +1,7 @@
 **
 <div class="text-center title">
     <h1>
-        <img src="./img/hand-scissors-solid.svg" alt="scissors icon" height = "25px">
+        <img src="./assets/hand-scissors-solid.svg" alt="scissors icon" height = "25px">
         <a href="https://spectacular-torte-2fa425.netlify.app/">Rock Paper Scissor Lizard Spock</a>
     </h1>
     <h4>
@@ -23,7 +23,7 @@
     </h4>
 </div>
 <section class="introduction" id="introduction">
-    <img src="./img/preview.png">
+    <img src="./assets/preview.png">
     <div class="content">
         <p>In this project, the main objective was to code with Javascript and make a basic rock, paper and scissors game.</p>
         <p>The game could have the rules anyone wanted, so in order to make it more interesting I decided to make a harder version of the game, which is rock, paper, scissors, lizard, spock from The Big Bang Theory show</p>
