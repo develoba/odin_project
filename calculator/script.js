@@ -13,10 +13,20 @@ function divide(a, b) {
     return a  / b;
 }
 
+function operate(a, op, b) {
+    if (op == '-') {
+        return substract(a, b);
+    } else if (op == '+') {
+        return add(a, b);
+    } else if (op == '*') {
+        return multiply(a, b);
+    } else if (op == '/') {
+        return divide(a, b);
+    }
+}
+
 let a = 2;
 let b = 2;
+let op = '/'
 
-console.log(add(a, b));
-console.log(substract(a, b));
-console.log(multiply(a, b));
-console.log(divide(a, b));
+console.log(operate(a, op, b));
