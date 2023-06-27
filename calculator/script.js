@@ -1,4 +1,8 @@
+const btn = document.getElementById('nine');
 
+btn.addEventListener('click', () => {
+    
+})
 
 function add(a, b) {
     return a + b;
