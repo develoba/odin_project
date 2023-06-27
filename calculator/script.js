@@ -1,8 +1,26 @@
-const btn = document.getElementById('nine');
+const btns = document.querySelectorAll('button');
+const regexNum = /[123456789]/;
 
-btn.addEventListener('click', () => {
-    
-})
+let op1 = '', op2 = '', operator = '';
+let counter = 0;
+
+btns.forEach(btn => btn.addEventListener('click', () => {
+    if (regexNum.test(btn.textContent)) {
+        if (counter % 2 != 0) {
+            op1 += btn.textContent;
+        } else {
+            op2 += btn.textContent;
+        }
+    } else if (btn.textContent == '=') {
+        op1 = Number(op1);
+        op2 = Number(op2);
+        let result = operate(op1, operator, op2);
+        console.log(result);
+    } else {
+        counter++;
+        operator = btn.textContent;
+    }
+}));
 
 function add(a, b) {
     return a + b;
