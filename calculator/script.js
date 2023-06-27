@@ -1,4 +1,5 @@
 const btns = document.querySelectorAll('button');
+const result = document.getElementById('result');
 const regexNum = /[123456789]/;
 
 let op1 = '', op2 = '', operator = '';
@@ -6,19 +7,24 @@ let counter = 0;
 
 btns.forEach(btn => btn.addEventListener('click', () => {
     if (regexNum.test(btn.textContent)) {
-        if (counter % 2 != 0) {
+        if (counter % 2 == 0) {
             op1 += btn.textContent;
+            console.log(op1)
         } else {
             op2 += btn.textContent;
         }
+        result.textContent += btn.textContent
     } else if (btn.textContent == '=') {
         op1 = Number(op1);
         op2 = Number(op2);
-        let result = operate(op1, operator, op2);
-        console.log(result);
+        let res = operate(op1, operator, op2);
+        // console.log(res);
+        result.textContent = res;
+        
     } else {
         counter++;
         operator = btn.textContent;
+        result.textContent += btn.textContent;
     }
 }));
 
