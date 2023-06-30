@@ -1,15 +1,61 @@
 const numBtns = document.querySelectorAll('.num-btn');
+const opBtns = document.querySelectorAll('.op-btn');
 const result = document.getElementById('result');
 const regexNum = /[123456789]/;
 
 let op1 = '', op2 = '', operator = '';
-let counter = 0;
+let counter = 0, numCounter = 0;
 let res = 0;
 
 function main() {
     numBtns.forEach(btn => btn.addEventListener('click', () => {
-        result.textContent = btn.textContent;
+        clear();
+        
+        if (operator == '=') {
+            numCounter = 0;
+            clear();
+            operator = '';
+        }
+        numCounter++;
+
+        console.log(counter);
+
+        if (counter % 2 == 0) {
+            op1 = update(op1, btn);
+        } else {
+            op2 = update(op2, btn);
+        }
     }));
+
+    opBtns.forEach(btn => btn.addEventListener('click', () => {
+        counter++;
+
+        if (btn.textContent != '=') {
+            operator = btn.textContent;
+        } else {
+            op1 = Number(op1);
+            op2 = Number(op2);
+            res += operate(op1, operator, op2);
+            result.textContent = res;
+
+            operator = btn.textContent;
+        }
+    }))
+}
+
+function clear() {
+    if (numCounter == 0) {
+        result.textContent = '';
+        op1 = '';
+        op2 = '';
+        res = 0;
+    }
+}
+
+function update(op, btn) {
+    op += btn.textContent;
+    result.textContent = op;
+    return op;
 }
 
 // btns.forEach(btn => btn.addEventListener('click', () => {
@@ -64,7 +110,7 @@ function operate(a, op, b) {
         return substract(a, b);
     } else if (op == '+') {
         return add(a, b);
-    } else if (op == '*') {
+    } else if (op == 'x') {
         return multiply(a, b);
     } else if (op == '/') {
         return divide(a, b);
