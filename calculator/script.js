@@ -1,6 +1,8 @@
 const numBtns = document.querySelectorAll('.num-btn');
 const opBtns = document.querySelectorAll('.op-btn');
+const funcBtns = document.querySelectorAll('.func-btn');
 const result = document.getElementById('result');
+
 const regexNum = /[123456789]/;
 
 let op1 = '', op2 = '', operator = '';
@@ -54,6 +56,26 @@ function main() {
             opCounter = 0;
         }
     }));
+
+    funcBtns.forEach(btn => btn.addEventListener('click', () => {
+        if (btn.textContent == 'AC') {
+            clear();
+            result.textContent = '0';
+        } else if (btn.textContent == '+/-') {
+            result.textContent == op1 ? op1 = -op1 : result.textContent == op2 ? op2 = -op2 : res = -res;
+            result.textContent = -result.textContent;
+        } else if (btn.textContent == '%') {
+            result.textContent == op1 ? op1 = op1 * 0.01 : result.textContent == op2 ? op2 *= 0.01 : res *= 0.01;
+            result.textContent *= 0.01;
+        } else {
+            result.textContent == op1 ? op1 += '.' : result.textContent == op2 ? op2 += '.' : res += '.';
+            result.textContent += '.';
+            console.log(op1);
+            console.log(op2);
+            console.log(res);
+        }
+    }));
+
 }
 
 function clear() {
@@ -62,6 +84,9 @@ function clear() {
         op1 = '';
         op2 = '';
         res = 0;
+        operator = '';
+        opCounter = 0;
+        counter = 0;
     }
 }
 
