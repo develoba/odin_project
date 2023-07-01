@@ -4,7 +4,7 @@ const result = document.getElementById('result');
 const regexNum = /[123456789]/;
 
 let op1 = '', op2 = '', operator = '';
-let counter = 0, numCounter = 0;
+let counter = 0, numCounter = 0, opCounter = 0;
 let res = 0;
 
 function main() {
@@ -16,31 +16,44 @@ function main() {
             clear();
             operator = '';
         }
+        
         numCounter++;
 
-        console.log(counter);
-
-        if (counter % 2 == 0) {
-            op1 = update(op1, btn);
+        if (opCounter > 1) {
+            op1 = res;
+            op2 = update(op2, btn, '');
+        } else if (counter % 2 == 0) {
+            op1 = update(op1, btn, op1);
         } else {
-            op2 = update(op2, btn);
+            op2 = update(op2, btn, op2);
         }
+
     }));
 
     opBtns.forEach(btn => btn.addEventListener('click', () => {
         counter++;
 
         if (btn.textContent != '=') {
+            opCounter++;
+            if (opCounter > 1) {
+                op1 = Number(op1);
+                op2 = Number(op2);
+                res = operate(op1, operator, op2);
+                result.textContent = res;
+            }
+
             operator = btn.textContent;
+
         } else {
             op1 = Number(op1);
             op2 = Number(op2);
-            res += operate(op1, operator, op2);
+            res = operate(op1, operator, op2);
             result.textContent = res;
 
             operator = btn.textContent;
+            opCounter = 0;
         }
-    }))
+    }));
 }
 
 function clear() {
@@ -52,45 +65,11 @@ function clear() {
     }
 }
 
-function update(op, btn) {
-    op += btn.textContent;
+function update(op, btn, prev) {
+    op = prev + btn.textContent;
     result.textContent = op;
     return op;
 }
-
-// btns.forEach(btn => btn.addEventListener('click', () => {
-//     if (regexNum.test(btn.textContent)) {
-//         if (res != 0) {
-//             op1 = '';
-//             op2 = '';
-//         }
-//         if (counter % 2 == 0) {
-//             op1 += btn.textContent;
-//             result.textContent = op1;
-//         } else {
-//             op2 += btn.textContent;
-//             result.textContent = op2;
-//         }
-//     } else {
-//         if (op1 != '' && op2 != '') {
-//             op1 = Number(op1);
-//             op2 = Number(op2);
-//             res += operate(op1, operator, op2);
-//             result.textContent = res;
-//         }
-
-
-//         if (btn.textContent == '=') {
-
-//         } else {
-//             operator = btn.textContent;
-//         }
-
-
-//         counter++;
-
-//     } 
-// }));
 
 function add(a, b) {
     return a + b;
@@ -116,11 +95,5 @@ function operate(a, op, b) {
         return divide(a, b);
     }
 }
-
-let a = 2;
-let b = 2;
-let op = '/'
-
-console.log(operate(a, op, b));
 
 main();
