@@ -86,6 +86,21 @@ button:hover {
     height: 3rem;
 }
 
+.header__title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-left: .5rem;
+    letter-spacing: .06rem;
+}
+.header__title img {
+    width: 1rem;
+}
+.header__title {
+    font-size: 1rem;
+    color: white;
+}
+
 .header__options {
     display: flex;
     align-items: stretch;
@@ -97,10 +112,21 @@ button:hover {
     font-size: 2rem;
     color: #858585;
 }
-#close {
-    /* font-size: 3rem; */
+#maximize {
+    font-size: 1.5rem;
 }
 
 .header__btn:hover {
+    background-color: #444;
+    border-radius: 0;
+}
+#close:hover {
     background-color: red;
+    border-top-right-radius: .5rem;
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        font-size: 1rem;
+    }
 }
