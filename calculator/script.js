@@ -7,6 +7,7 @@ const minBtn = document.getElementById('minimize');
 const calcContainer = document.querySelector('.container');
 const calcIcon = document.getElementById('calc-icon');
 const maxBtn = document.getElementById('maximize');
+const closeBtn = document.getElementById('close');
 
 const regexNum = /[123456789]/;
 
@@ -91,13 +92,25 @@ function main() {
         calcIcon.classList.add('minimize-icon');
     });
     calcIcon.addEventListener('click', () => {
-        calcContainer.classList.toggle('minimize');
-        calcIcon.classList.toggle('active-icon');
-        calcIcon.classList.toggle('minimize-icon');
+        if (calcContainer.classList.contains('close')) {
+            calcContainer.classList.remove('close');
+            calcIcon.classList.remove('close-icon');
+            calcIcon.classList.add('active-icon');
+            
+        } else {
+            calcContainer.classList.toggle('minimize');
+            calcIcon.classList.toggle('active-icon');
+            calcIcon.classList.toggle('minimize-icon');
+        }
     });
     maxBtn.addEventListener('click', () => {
         calcContainer.classList.toggle('maximize');
-    })
+    });
+    closeBtn.addEventListener('click', () => {
+        calcContainer.classList.add('close');
+        calcIcon.classList.remove('active-icon');
+        calcIcon.classList.add('close-icon');
+    });
 
 }
 
