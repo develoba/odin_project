@@ -25,7 +25,7 @@ body {
 button {
     font: inherit;
     cursor: pointer;
-    padding: 2rem;
+    padding: min(1rem, 30%);
     border-radius: .5rem;
     border-color: transparent;
     background-color: #444;
@@ -37,7 +37,7 @@ button:hover {
 }
 
 .container {
-    width: 50rem;
+    width: min(25rem, 90%);
     background-color: #202020;
     border-radius: .5rem;
 }
