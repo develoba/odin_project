@@ -213,8 +213,24 @@ img {
     width: 1.5rem;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 380px) {
+    .side__nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 212px) {
     body {
+        font-size: 1rem;
+    }
+    .header__options {
+        align-self: stretch;
+    }
+    .header__btn {
+        padding: .2rem .5rem;
+        font-size: 1.5rem;
+    }
+    #maximize {
         font-size: 1rem;
     }
 }
