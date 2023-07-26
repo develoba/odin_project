@@ -22,6 +22,10 @@ body {
     background: url('/img/bg.jpg') center/cover no-repeat;
 }
 
+img {
+    display: block;
+}
+
 button {
     font: inherit;
     cursor: pointer;
@@ -123,6 +127,60 @@ button:hover {
 #close:hover {
     background-color: red;
     border-top-right-radius: .5rem;
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #670E28;
+    width: 100%;
+    padding: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main__nav, .side__nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+ul li:nth-of-type(4) a img {
+    width: 1.25rem;
+}
+ul li:nth-of-type(2) a i {
+    color: white;
+    font-size: 1.3rem;
+}
+ul li {
+    padding: .5rem;
+}
+ul li:hover, 
+ul li.active-icon {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: .3rem;
+}
+.active-icon {
+    border-bottom: 2px solid #FF529F;
+}
+
+.side__nav {
+    position: absolute;
+    bottom: .2rem;
+    right: .5rem;
+}
+
+.side__nav i {
+    font-size: 1rem;
+    color: white;
+    
+}
+
+img {
+    width: 1.5rem;
 }
 
 @media screen and (max-width: 425px) {
