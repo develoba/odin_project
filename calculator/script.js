@@ -3,6 +3,11 @@ const opBtns = document.querySelectorAll('.op-btn');
 const funcBtns = document.querySelectorAll('.func-btn');
 const result = document.getElementById('result');
 
+const minBtn = document.getElementById('minimize');
+const calcContainer = document.querySelector('.container');
+const calcIcon = document.getElementById('calc-icon');
+const maxBtn = document.getElementById('maximize');
+
 const regexNum = /[123456789]/;
 
 let op1 = '', op2 = '', operator = '';
@@ -79,6 +84,20 @@ function main() {
             console.log(res);
         }
     }));
+
+    minBtn.addEventListener('click', () => {
+        calcContainer.classList.add('minimize');
+        calcIcon.classList.remove('active-icon');
+        calcIcon.classList.add('minimize-icon');
+    });
+    calcIcon.addEventListener('click', () => {
+        calcContainer.classList.toggle('minimize');
+        calcIcon.classList.toggle('active-icon');
+        calcIcon.classList.toggle('minimize-icon');
+    });
+    maxBtn.addEventListener('click', () => {
+        calcContainer.classList.toggle('maximize');
+    })
 
 }
 
