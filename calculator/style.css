@@ -52,12 +52,12 @@ button:hover {
     opacity: .97;
 }
 .result {
-    grid-area: 2 / 1 / 3 / 5;
-    height: 20px;
+    /* grid-area: 2 / 1 / 3 / 5; */
     text-align: right;
     color: white;
     font-size: 3rem;
-    height: 3.5rem;
+    height: 5rem;
+    padding: 1rem 1rem 1rem 0;
 }
 #zero {
     grid-area: 5 / 1 / 6 / 3;
