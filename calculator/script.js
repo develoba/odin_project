@@ -45,6 +45,7 @@ function main() {
             }
 
             operator = btn.textContent;
+            
 
         } else {
             op1 = Number(op1);
@@ -54,6 +55,9 @@ function main() {
 
             operator = btn.textContent;
             opCounter = 0;
+
+            op1 = '';
+            op2 = '';
         }
     }));
 
