@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="" id="header">
         <div class="logo">
             <p class="logo__title">code<span>r</span></p>
             <p class="logo__subtitle">
@@ -20,16 +20,23 @@
         <section class="hero">
             <p class="hero__desc">i+d+<span>i</span> | remoto | españa</p>
             <h1 class="hero__title">frontend developer</h1>
-            <a class="btn" href="#" id="openBtn">Enviar solicitud</a>
+            <div class="btn open__action" id="openBtn">Enviar solicitud</div>
         </section>
 
         <div class="open">
-            <a href="#" class="open__icon" id="openIcon">
+            <div class="open__icon open__action" id="openIcon">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z"/></svg>
-            </a>
+            </div>
         </div>
     </header>
 
 
+    <main class="" id="modal">
+        <div class="close__btn" id="closeBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M240-120v-60h481v60H240Z"/></svg>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
 </body>
 </html>

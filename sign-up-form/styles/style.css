@@ -8,11 +8,12 @@
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: inherit;
+  overflow: hidden;
 }
 
 body {
-  background: #0B212D;
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,19 +31,60 @@ body {
   font-weight: 500;
   margin-top: 0.5rem;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 .btn:hover {
   background: #fed48c;
 }
 
 header {
-  padding: 1.25rem;
+  background: #0B212D;
+  padding: 1.25rem 0;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+header.modal {
+  background-color: white;
+  transition: all 3s;
+}
+header.modal .logo__subtitle, header.modal .logo__title {
+  color: #0B212D;
+}
+header.modal .logo__title {
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  transition: all 1s;
+}
+header.modal .logo__subtitle {
+  font-size: 0.75rem;
+  transition: all 1s;
+}
+header.modal .logo__subtitle svg {
+  height: 20px;
+  width: 20px;
+  transition: all 1s;
+}
+header.modal .hero__desc {
+  position: absolute;
+  top: 18vh;
+  font-size: 0.75rem;
+  z-index: 5;
+  transition: all 0.5s;
+}
+header.modal .hero__title {
+  position: absolute;
+  top: 20vh;
+  font-size: 2.5rem;
+  z-index: 5;
+  transition: all 0.5s;
+}
+header.modal .btn {
+  display: none;
 }
 
 .logo {
@@ -67,6 +109,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
 }
 .logo .logo__subtitle span {
   letter-spacing: 0.5rem;
@@ -88,6 +131,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 1rem;
+  top: 1000px;
 }
 .hero .hero__desc span {
   text-transform: lowercase;
@@ -97,12 +141,43 @@ header {
   font-family: "Roboto Mono", monospace;
   letter-spacing: 0.3rem;
   font-size: 3rem;
+  top: 1000px;
 }
 
+.open__icon {
+  cursor: pointer;
+}
 .open__icon svg {
   fill: white;
   transition: fill 0.2s ease;
 }
 .open__icon:hover svg {
   fill: rgba(255, 255, 255, 0.7);
+}
+
+main {
+  height: 87vh;
+  width: 100%;
+  background-color: #0B212D;
+  position: absolute;
+  bottom: -1000px;
+  left: 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  transition: bottom 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .close__btn {
+  transform: rotate(180deg);
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+main .close__btn svg {
+  fill: white;
+}
+main.open {
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -12,10 +12,11 @@ $yellow-light: #fed48c;
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: inherit;
+    overflow: hidden;
 }
 body {
-    background: $blue;
     min-height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +34,7 @@ body {
     font-weight: 500;
     margin-top: .5rem;
     transition: all .2s ease;
+    cursor: pointer;
 
     &:hover {
         background: $yellow-light;
@@ -41,13 +43,58 @@ body {
 
 
 header {
-    padding: 1.25rem;
+    background: $blue;
+    padding: 1.25rem 0;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+
+    &.modal {
+        background-color: white;
+        transition: all 3s;
+
+        .logo__subtitle, .logo__title {
+            color: $blue;
+        }
+        .logo__title {
+            font-size: 1.2rem;
+            letter-spacing: .5rem;
+            transition: all 1s;
+        }
+        .logo__subtitle {
+            font-size: .75rem;
+            transition: all 1s;
+
+            svg {
+                height: 20px;
+                width: 20px;
+                transition: all 1s;
+            }
+        }
+        .hero__desc {
+            position: absolute;
+            top: 18vh;
+            font-size: .75rem;
+            z-index: 5;
+            transition: all .5s;
+        }
+        .hero__title {
+            position: absolute;
+            top: 20vh;
+            font-size: 2.5rem;
+            z-index: 5;
+            transition: all .5s;
+        }
+
+        .btn {
+            display: none;
+        }
+    }
+    
 }
 
 .logo {
@@ -74,6 +121,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1rem;
 
         span {
             letter-spacing: .5rem;
@@ -97,6 +145,7 @@ header {
         text-transform: uppercase;
         letter-spacing: .1rem;
         font-size: 1rem;
+        top: 1000px;
         span {
             text-transform: lowercase;
         }
@@ -107,10 +156,12 @@ header {
         font-family: 'Roboto Mono', monospace;
         letter-spacing: .3rem;
         font-size: 3rem;
+        top: 1000px;
     }
 }
 
 .open__icon {
+    cursor: pointer;
     svg {
         fill: white;
         transition: fill .2s ease;
@@ -118,5 +169,36 @@ header {
 
     &:hover svg {
         fill: rgba(255,255,255,.7);
+    }
+}
+
+
+main {
+    height: 87vh;
+    width: 100%;
+    background-color: $blue;
+    position: absolute;
+    bottom: -1000px;
+    left: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: bottom .4s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .close__btn {
+        transform: rotate(180deg);
+        margin-top: .5rem;
+        cursor: pointer;
+        svg {
+            fill: white;
+        }
+    }
+
+    &.open {
+      bottom: 0;  
     }
 }
