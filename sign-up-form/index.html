@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 </head>
 <body>
-    <header class="" id="header">
+    <header class="modal" id="header">
         <div class="logo">
             <p class="logo__title">code<span>r</span></p>
             <p class="logo__subtitle">
@@ -23,20 +26,50 @@
             <div class="btn open__action" id="openBtn">Enviar solicitud</div>
         </section>
 
-        <div class="open">
-            <div class="open__icon open__action" id="openIcon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z"/></svg>
-            </div>
+        <div class="open__icon open__action" id="openIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z"/></svg>
         </div>
     </header>
 
 
-    <main class="" id="modal">
+    <main class="open" id="modal">
         <div class="close__btn" id="closeBtn">
             <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M240-120v-60h481v60H240Z"/></svg>
         </div>
+
+        <form action="" method="post" class="form">
+            <div class="form__item">
+                <label for="name">Nombre *</label>
+                <input required type="text" name="name" id="name" placeholder="Miguel">
+            </div>
+            <div class="form__item">
+                <label for="last_name">Apellidos *</label>
+                <input required type="text" name="last_name" id="lastName" placeholder="Pérez">
+            </div>
+            <div class="form__item">
+                <label for="email">Correo *</label>
+                <input required type="email" name="email" id="email" placeholder="miguelperez@gmail.com">
+            </div>
+            <div class="form__item">
+                <label for="phone">Teléfono *</label>
+                <input required type="tel" name="phone" id="phone" >
+            </div>
+            <div class="form__item">
+                <label for="cv">Subir currículum *</label>
+                <input required type="file">
+            </div>
+            <div class="form__item">
+                <label for="">Carta de presentación</label>
+                <textarea type=""></textarea>
+            </div>
+
+        </form>
+
+        <div></div>
     </main>
 
     <script src="./script.js"></script>
+    
+
 </body>
 </html>
