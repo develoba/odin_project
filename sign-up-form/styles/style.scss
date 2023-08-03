@@ -2,6 +2,7 @@
 
 $blue: #0B212D;
 $yellow: #FFCA6E;
+$yellow-light: #fed48c;
 
 * {
     margin: 0;
@@ -20,13 +21,36 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-span {
-    display: block;
+
+.btn {
+    background: $yellow;
+    padding: .75rem 1.75rem;
+    border-radius: 30px;
+    color: black;
+    font-family: inherit;
+    text-decoration: none;
+    box-shadow: 2px 4px 2px 0 rgba(0,0,0,.2);
+    font-weight: 500;
+    margin-top: .5rem;
+    transition: all .2s ease;
+
+    &:hover {
+        background: $yellow-light;
+    }
 }
 
 
 header {
     padding: 1.25rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -36,14 +60,17 @@ header {
     .logo__title {
         color: white;
         font-family: 'Roboto Mono', monospace;
-        font-size: 2.25rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
         letter-spacing: .75rem;
+
+        span {
+            letter-spacing: 0;
+        }
     }
 
     .logo__subtitle {
         color: white;
-        font-weight: normal;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,5 +83,29 @@ header {
             height: 30px;
             width: 30px;
         }
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: .5rem;
+
+    .hero__desc {
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        font-size: 1rem;
+        span {
+            text-transform: lowercase;
+        }
+    }
+
+    .hero__title {
+        text-transform: capitalize;
+        font-family: 'Roboto Mono', monospace;
+        letter-spacing: .3rem;
+        font-size: 3rem;
     }
 }
