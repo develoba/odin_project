@@ -289,6 +289,10 @@ main.open .form {
   cursor: pointer;
   display: none;
 }
+.form .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .form .btn {
   grid-column: 1/3;
   justify-self: center;
@@ -309,4 +313,11 @@ select:-webkit-autofill:focus {
   border: none;
   -webkit-text-fill-color: white;
   -webkit-box-shadow: 0 0 0px 1000px rgba(48, 73, 82, 0.8666666667) inset;
+}
+
+.success-container {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@ const input = document.querySelector("#phone");
 const inputs = document.querySelectorAll('input');
 
 // input control
+const form = document.getElementById('form');
 const fileContainer = document.querySelector('.file-input-container');
 const fileInput = document.getElementById('cv');
 const fileLabel = document.getElementById('file-label');
@@ -13,6 +14,11 @@ const fileText = document.getElementById('file-text');
 const progressBar = document.getElementById('progress-bar');
 const progressBarAfter = document.getElementById('progress-bar--after');
 const deleteIcon = document.getElementById('delete-icon');
+
+//Change page when click on submit
+const submitBtn = document.getElementById('submitBtn');
+const successContainer = document.getElementById('success-container');
+
 
 const initialFileText = fileText.innerHTML;
 
@@ -74,7 +80,24 @@ fileInput.addEventListener('change', () => {
 deleteIcon.addEventListener('click', () => {
     resetFileInput();
     fileContainer.appendChild(fileInput);
-})
+});
+
+// submitBtn.addEventListener('click', () => {
+//     form.style.display = 'none'
+// });
+form.addEventListener('submit', () => {
+    const allFieldsValid = form.checkValidity()
+
+    if (!allFieldsValid) {
+        e.preventDefault();
+    } else {
+        successContainer.style.display = 'block';
+        form.style.display = 'none';
+    }
+
+    submitBtn.disabled = !allFieldsValid;
+});
+
 
 function uploadFile(file) {
     const totalSize = file.size;

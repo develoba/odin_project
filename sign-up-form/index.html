@@ -38,7 +38,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M240-120v-60h481v60H240Z"/></svg>
         </div>
 
-        <form action="" method="post" class="form">
+        <form action="#modal" class="form" id="form">
             <div class="form__item">
                 <label for="name">Nombre *</label>
                 <input required type="text" name="name" id="name" placeholder="Miguel">
@@ -75,8 +75,12 @@
                 <textarea placeholder="Escribe tu carta..." rows="3"></textarea>
             </div>
 
-            <input type="submit" class="btn" value="Enviar solicitud">
+            <input type="submit" class="btn" id="submitBtn" value="Enviar solicitud">
         </form>
+
+        <div class="success-container" id="success-container">
+            <p>¡Su solicitud se ha enviado correctamente!</p>
+        </div>
 
         <div></div>
     </main>
