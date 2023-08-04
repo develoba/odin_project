@@ -109,9 +109,8 @@ Finally, I added a script to simulate what would happen when the form is sent to
 ## Responsiveness
 
 <p align="top">
-    <img align="top" src="./img/desktopPreview.png" width="50%"> 
-    <img align="top" src="./img/tabletPreview.png" width="20%"> 
-    <img align="top" src="./img/mobilePreview.png" width="10%">
+    <img align="top" src="./img/preview.png" width="50%"> 
+    <img align="top" src="./img/previewMobile.png" width="40%">
 </p>
 
 
