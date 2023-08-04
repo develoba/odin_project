@@ -1,7 +1,7 @@
 <div align="center">
     <h1>
-        <img src="" alt="icon" height = "25px">
-        <a href="https://spectacular-torte-2fa425.netlify.app/">Sign-up form</a>
+        <img src="./assets/logo.svg" alt="icon" height = "25px">
+        <a href="https://spectacular-torte-2fa425.netlify.app/">Job Apply form</a>
     </h1>
     <h4>
         <b>This is a project assignment from The Odin course (Javascript path) -- https://www.theodinproject.com</a></b>
