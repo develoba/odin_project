@@ -203,6 +203,11 @@ main {
 
     &.open {
       bottom: 0;  
+
+      .form {
+          top: 20vh;
+          transition: top .5s;
+      }
     }
 }
 
@@ -213,6 +218,10 @@ main {
     max-width: 60rem;
     width: 100%;
     padding: 0 2rem;
+    position: absolute;
+    top: 1000px;
+    
+    
 
     .form__item {
         display: flex;
@@ -232,6 +241,10 @@ main {
             padding: .75rem 1.5rem;
             background-color: $blue-box;
             color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        textarea {
+            resize: none;
         }
         ::placeholder {
             color: rgba(255,255,255,.5);
@@ -247,37 +260,76 @@ main {
     }
 
     .input-file {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
+        display: none;
     }
     .file-input-container {
         position: relative;
         width: 100%;
-        height: auto;
-        padding: .75rem 1.5rem;
+        height: 46px;
+        // padding: .75rem 1.5rem;
+        padding: .4rem .6rem;
         background-color: $blue-box;
         border-radius: 15px;
         cursor: pointer;
+        
+        #file-label {
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin: .1rem;
+            border: 1px dashed rgba(255,255,255,.5);
+            border-radius: 8px;
+            padding: .25rem;
+
+            .file-text {
+                color: white;
+                width: 100%;
+                text-align: center;
+                
+    
+                span {
+                    text-decoration: underline;
+                }
+            }
+            .progress-bar {
+                width: 70%;
+                height: 11.33px;
+                margin: 5px 0;
+                background-color: rgba(255,255,255,.5);
+                border-radius: 10px;
+                display: none;
+                position: relative;
+            }
+            .progress-bar--after {
+                width: 0%;
+                height: 100%;
+                content: '';
+                display: block;
+                background-color: $blue;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 10px;
+            }
+            #delete-icon {
+                color: white;
+                cursor: pointer;
+                display: none;
+            }
+        }
+        
     }
-    .file-input-container::after {
-        content: 'Arrastra o sube el archivo';
-        cursor: pointer;
-        color: white;
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
+
 
     .btn {
         grid-column: 1 / 3;
         justify-self: center;
         width: min(100%, 20rem);
         padding: 1.2rem;
+        border: none;
     }
 
     

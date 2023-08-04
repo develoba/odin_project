@@ -6,11 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 </head>
 <body>
-    <header class="modal" id="header">
+    <header class="" id="header">
         <div class="logo">
             <p class="logo__title">code<span>r</span></p>
             <p class="logo__subtitle">
@@ -32,7 +33,7 @@
     </header>
 
 
-    <main class="open" id="modal">
+    <main class="" id="modal">
         <div class="close__btn" id="closeBtn">
             <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M240-120v-60h481v60H240Z"/></svg>
         </div>
@@ -57,12 +58,21 @@
             <div class="form__item">
                 <label for="cv">Subir currículum *</label>
                 <div class="file-input-container">
-                    <input required type="file" class="input-file" accept=".pdf,.doc,.docx">
+                    <input required type="file" class="input-file" name="cv" id="cv" accept=".pdf,.doc,.docx">
+
+                    <label for="cv" id="file-label">
+                        <p class="file-text" id="file-text">Arrastra o <span>sube</span> el archivo</p>
+    
+                        <div class="progress-bar" id="progress-bar">
+                            <div class="progress-bar--after" id="progress-bar--after"></div>
+                        </div>
+                        <i class="fas fa-times" id="delete-icon"></i>
+                    </label>
                 </div>
             </div>
             <div class="form__item">
                 <label for="">Carta de presentación</label>
-                <textarea type=""></textarea>
+                <textarea placeholder="Escribe tu carta..." rows="3"></textarea>
             </div>
 
             <input type="submit" class="btn" value="Enviar solicitud">
