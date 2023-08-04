@@ -110,7 +110,7 @@ Finally, I added a script to simulate what would happen when the form is sent to
 
 <p align="top">
     <img align="top" src="./assets/preview.png" width="50%"> 
-    <img align="top" src="./asstes/previewMobile.png" width="40%">
+    <img align="top" src="./assets/previewMobile.png" width="40%">
 </p>
 
 
